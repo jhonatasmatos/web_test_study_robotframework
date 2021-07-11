@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.6 on darwin)" generated="20210710 23:57:35.282" rpa="false" schemaversion="2">
+<suite id="s1" name="SrBarrigaTest" source="/Users/jhow/Documents/projetos/webtest_study_robotframework/SrBarrigaTest.robot">
+<test id="s1-t1" name="Caso de Teste 01: Preencher credenciais inválidas">
+<kw name="Acessar o app sr barriga" library="ResourceSrBarrigaTest">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210710 23:57:35.755" level="INFO">Opening browser 'chrome' to base url 'https://srbarriga.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20210710 23:57:35.754" endtime="20210710 23:57:40.581"/>
+</kw>
+<status status="PASS" starttime="20210710 23:57:35.752" endtime="20210710 23:57:40.581"/>
+</kw>
+<kw name="Preencher email credenciais inválidas" library="ResourceSrBarrigaTest">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_EMAIL}</arg>
+<arg>usuario@usuario.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210710 23:57:40.584" level="INFO">Typing text 'usuario@usuario.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20210710 23:57:40.583" endtime="20210710 23:57:40.798"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_PASSWORD}</arg>
+<arg>usuario</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210710 23:57:40.799" level="INFO">Typing text 'usuario' into text field 'id=senha'.</msg>
+<status status="PASS" starttime="20210710 23:57:40.798" endtime="20210710 23:57:40.914"/>
+</kw>
+<status status="PASS" starttime="20210710 23:57:40.582" endtime="20210710 23:57:40.915"/>
+</kw>
+<kw name="Clicar botão entrar" library="ResourceSrBarrigaTest">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${BTN_ENTER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210710 23:57:40.916" level="INFO">Clicking button 'css=button.btn'.</msg>
+<status status="PASS" starttime="20210710 23:57:40.916" endtime="20210710 23:57:41.257"/>
+</kw>
+<status status="PASS" starttime="20210710 23:57:40.915" endtime="20210710 23:57:41.258"/>
+</kw>
+<kw name="Verificar mensagem de erro &quot;Problemas com o login do usuário&quot;" library="ResourceSrBarrigaTest" sourcename="Verificar mensagem de erro &quot;${EXPECTED_MESSAGE}&quot;">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>text=${EXPECTED_MESSAGE}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20210710 23:57:41.287" level="INFO">Current page contains text 'Problemas com o login do usuário'.</msg>
+<status status="PASS" starttime="20210710 23:57:41.263" endtime="20210710 23:57:41.288"/>
+</kw>
+<status status="PASS" starttime="20210710 23:57:41.259" endtime="20210710 23:57:41.288"/>
+</kw>
+<kw name="Fechar navegador" library="ResourceSrBarrigaTest">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210710 23:57:41.289" endtime="20210710 23:57:41.393"/>
+</kw>
+<status status="PASS" starttime="20210710 23:57:41.288" endtime="20210710 23:57:41.393"/>
+</kw>
+<status status="PASS" starttime="20210710 23:57:35.750" endtime="20210710 23:57:41.394"/>
+</test>
+<status status="PASS" starttime="20210710 23:57:35.285" endtime="20210710 23:57:41.396"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="SrBarrigaTest">SrBarrigaTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
